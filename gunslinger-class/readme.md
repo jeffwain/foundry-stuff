@@ -2,7 +2,7 @@
 
 **Gun setup**
 
-- Make sure to have two activities on the gun, one that does an attack and consumes ammo, and a second activity for reload that tops it up.
+- Make sure to have two activities on the gun, one that does an attack and consumes ammo, and a second activity for reload that tops it up. There's a pre-created gun in the repo here that you can import into Foundry.
 - Additional crit damage modifiers can be added as Effects to the gun (which is the route I'm moving to) or you can modify the crit damage directly on the gun.
 - You can only modify crit ranges with macros, so there's a Deadeye: Hit and Deadeye: Miss macro created here that work (for now).
 
