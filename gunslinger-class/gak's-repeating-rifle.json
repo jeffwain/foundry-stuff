@@ -1,0 +1,445 @@
+{
+  "name": "Gak's Repeating Rifle",
+  "type": "weapon",
+  "system": {
+    "description": {
+      "value": "<div class=\"rd__b  rd__b--2\"><p><strong>Range. Loud.</strong> <strong>Ammunition. Two-handed.</strong></p><p><strong>Reload.</strong> This weapon can be fired a number of times equal to its reload score before it must be reloaded before it can be fired again. Reloading takes an action or bonus action. You must have a free hand to reload a firearm.</p><div id=\"message-content-1278730849990475867\" class=\"markup_f8f345 messageContent_f9f2ca\"><p><span><strong>Threaded Barrel.</strong> You can attach muzzle devices to this weapon.</span></p><p><span><strong>Flash Hider.</strong> When you are hidden and miss with a ranged weapon attack using this weapon, making the attack doesn’t give away your location. (but it's still loud)</span></p></div><p><strong>Big Badaboom. </strong>While tinkering with your rifle, you accidentally made some unanticipated adjustments. When you roll a 1 on an attack with this weapon, you and all creatures within 5 feet of you take [[/damage 1d4 sonic]] damage and are deafened until the start of your next turn.</p></div>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "",
+      "book": "HA:G",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 8,
+      "units": "lb"
+    },
+    "price": {
+      "value": 90,
+      "denomination": "gp"
+    },
+    "attunement": "",
+    "rarity": "",
+    "identified": true,
+    "cover": null,
+    "crewed": false,
+    "range": {
+      "value": 150,
+      "long": 450,
+      "units": "ft",
+      "reach": null
+    },
+    "uses": {
+      "max": "6",
+      "recovery": [],
+      "spent": 3
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": 1,
+        "denomination": 10,
+        "bonus": "",
+        "types": [
+          "piercing"
+        ],
+        "custom": {
+          "enabled": false,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      }
+    },
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": 0,
+      "max": 0,
+      "dt": null,
+      "conditions": ""
+    },
+    "properties": [
+      "amm",
+      "fir",
+      "rel",
+      "two"
+    ],
+    "proficient": 1,
+    "unidentified": {
+      "name": "",
+      "description": ""
+    },
+    "type": {
+      "value": "martialR",
+      "baseItem": ""
+    },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "type": "attack",
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "",
+              "value": "1",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "150",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": ""
+          },
+          "affects": {
+            "count": "0",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "attack": {
+          "ability": "dex",
+          "bonus": "",
+          "critical": {
+            "threshold": 20
+          },
+          "flat": false,
+          "type": {
+            "value": "ranged",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": "3d10"
+          },
+          "includeBase": true,
+          "parts": []
+        },
+        "sort": 0
+      },
+      "C7Fu3MsVGN8DtNXm": {
+        "type": "utility",
+        "_id": "C7Fu3MsVGN8DtNXm",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "@item.uses.value - @item.uses.max",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "material",
+              "value": "-(@item.uses.value - @item.uses.max)",
+              "target": "HObpsFEU9coamBgu",
+              "scaling": {}
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": "🔄️ Reload!"
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "roll": {
+          "prompt": false,
+          "visible": false,
+          "name": "",
+          "formula": ""
+        },
+        "name": "Reload"
+      }
+    },
+    "identifier": "rifle-repeating",
+    "container": null,
+    "ammunition": {
+      "type": ""
+    },
+    "magicalBonus": null,
+    "mastery": "",
+    "attuned": false,
+    "equipped": true
+  },
+  "img": "assets/icons/weapons/guns/INV_Musket_02.webp",
+  "flags": {
+    "plutonium": {
+      "page": "items.html",
+      "source": "HA:GS",
+      "hash": "rifle%2c%20repeating_ha%3ags"
+    },
+    "scene-packer": {},
+    "rsr5e": {
+      "quickDamage": {
+        "context": {
+          "0": ""
+        },
+        "value": {
+          "0": true
+        }
+      },
+      "quickOther": {
+        "context": ""
+      },
+      "quickDesc": {
+        "value": false
+      },
+      "quickFooter": {
+        "value": true
+      },
+      "quickAttack": {
+        "value": true
+      },
+      "consumeQuantity": {
+        "value": false
+      },
+      "consumeResource": {
+        "value": true
+      },
+      "consumeUses": {
+        "value": true
+      }
+    },
+    "items-with-spells-5e": {
+      "item-spells": []
+    },
+    "rest-recovery": {
+      "data": {
+        "recovery": {
+          "enabled": false
+        }
+      }
+    },
+    "magicitems": {
+      "enabled": false,
+      "default": "",
+      "equipped": false,
+      "attuned": false,
+      "charges": "0",
+      "chargeType": "c1",
+      "destroy": false,
+      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+      "rechargeable": false,
+      "recharge": "0",
+      "rechargeType": "t1",
+      "rechargeUnit": "r1",
+      "sorting": "l"
+    },
+    "dnd5e": {
+      "last": {
+        "dnd5eactivity000": {
+          "ammunition": "nRRWt6fKKhMjn3nI",
+          "attackMode": "twoHanded",
+          "damageType": {
+            "0": "piercing"
+          }
+        }
+      },
+      "migratedUses": 6,
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "tidy5e-sheet": {
+      "section": "",
+      "actionSection": ""
+    },
+    "exportSource": {
+      "world": "wild-wild-west",
+      "system": "dnd5e",
+      "coreVersion": "12.331",
+      "systemVersion": "4.3.9"
+    }
+  },
+  "effects": [
+    {
+      "name": "Rifle, repeating",
+      "origin": "Actor.eUeXxHFJUgChH6nq.Item.XudNsMseWlA4jkt8",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "transfer": true,
+      "disabled": true,
+      "_id": "tx4Hr0ncBWL7QmDH",
+      "changes": [
+        {
+          "key": "flags.dnd5e.weaponCriticalThreshold",
+          "mode": 5,
+          "value": "20-@system.uses.value",
+          "priority": 19
+        }
+      ],
+      "description": "",
+      "statuses": [],
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "dontApply": false,
+          "stackable": "noneName",
+          "showIcon": false,
+          "durationExpression": "",
+          "specialDuration": [],
+          "disableCondition": ""
+        },
+        "core": {
+          "overlay": false
+        },
+        "ActiveAuras": {
+          "isAura": false,
+          "aura": "None",
+          "nameOverride": "",
+          "radius": "",
+          "alignment": "",
+          "type": "",
+          "customCheck": "",
+          "ignoreSelf": false,
+          "height": false,
+          "hidden": false,
+          "displayTemp": false,
+          "hostile": false,
+          "onlyOnce": false,
+          "wallsBlock": "system",
+          "statuses": []
+        }
+      },
+      "tint": "#ffffff",
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "dnd5e",
+        "systemVersion": "4.3.9",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "icons/weapons/guns/rifle-brown.webp",
+      "type": "base",
+      "system": {},
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "4.3.9",
+    "createdTime": 1746193876251,
+    "modifiedTime": 1746193876280,
+    "lastModifiedBy": "KpM8y6ZH9RGMDbVE"
+  }
+}
