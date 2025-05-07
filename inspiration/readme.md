@@ -5,9 +5,4 @@ I used this setup with Item Macros before activities were added, but now I need 
 **Inspiration setup**
 
 - Create an item for each player called "Inspiration" that can track charges, with a maximum value.
-
-**Grit use**
-
-- First you'll need a Grit feature to track use of grit, then you have two options for spending it. Either method should consume the Grit uses.
-  1. Create activities for each available use of grit beneath the Grit feature
-  2. Create separate features for each use of Grit (e.g. Buck Up) that consume the grit feature
+- Set up the macro to roll with each item's use (using Item Macros) or add the macro to all players' toolbars (no Item Macros)
