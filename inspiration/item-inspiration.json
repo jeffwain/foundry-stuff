@@ -68,7 +68,14 @@
           "formula": ""
         },
         "name": "Gain inspiration",
-        "img": "assets/icons/magic-skills/social/stars_popularity_2.webp"
+        "img": "assets/icons/magic-skills/social/stars_popularity_2.webp",
+        "flags": {},
+        "visibility": {
+          "level": {},
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
       },
       "9jNlUzUUYWBaBNVS": {
         "type": "utility",
@@ -138,7 +145,14 @@
           "formula": ""
         },
         "name": "Spend inspiration",
-        "img": "assets/icons/magic-skills/symbols/Achievement_DoubleRainbow.webp"
+        "img": "assets/icons/magic-skills/symbols/Achievement_DoubleRainbow.webp",
+        "flags": {},
+        "visibility": {
+          "level": {},
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
       }
     },
     "uses": {
@@ -162,16 +176,16 @@
     },
     "prerequisites": {
       "level": null,
+      "items": [],
       "repeatable": false
     },
     "properties": [],
     "requirements": "",
     "advancement": [],
-    "cover": null,
     "crewed": false
   },
   "effects": [],
-  "folder": null,
+  "folder": "3jaNIAibBwoTqfLD",
   "flags": {
     "tidy5e-sheet": {
       "section": "",
@@ -182,20 +196,26 @@
         "activity": [],
         "effect": []
       }
-    },
-    "exportSource": {
-      "world": "wild-wild-west",
-      "system": "dnd5e",
-      "coreVersion": "12.331",
-      "systemVersion": "4.3.9"
     }
   },
   "_stats": {
-    "coreVersion": "12.331",
+    "compendiumSource": "Compendium.jeffs-shared-content.shared-items.Item.LB8go3yKItVFCdaq",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "drakkenheim",
+      "uuid": "Item.4Iwd0hgZD0Yi7OUH",
+      "coreVersion": "13.351",
+      "systemId": "dnd5e",
+      "systemVersion": "5.2.2"
+    },
+    "coreVersion": "13.351",
     "systemId": "dnd5e",
-    "systemVersion": "4.1.2",
-    "createdTime": 1737231950040,
-    "modifiedTime": 1745545767378,
-    "lastModifiedBy": "KpM8y6ZH9RGMDbVE"
+    "systemVersion": "5.2.2",
+    "createdTime": 1766098007284,
+    "modifiedTime": 1766098007284,
+    "lastModifiedBy": "SYzG5ptGUrrPgipY"
+  },
+  "ownership": {
+    "default": 0
   }
 }

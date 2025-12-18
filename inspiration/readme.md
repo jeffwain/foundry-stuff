@@ -4,5 +4,5 @@ I used this setup with Item Macros before activities were added, but now I need 
 
 **Inspiration setup**
 
-- Create an item for each player called "Inspiration" that can track charges, with a maximum value.
-- Set up the macro to roll with each item's use (using Item Macros) or add the macro to all players' toolbars (no Item Macros)
+- Create an item for each player called "Inspiration" that can track charges. Import the data from `item-inspiration.json`.
+- Add `macro-give-inspiration` to the GM's toolbar. Run the macro to dole out inspiration.
