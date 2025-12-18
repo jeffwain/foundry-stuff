@@ -4,10 +4,11 @@ var itemName = "Inspiration";
 /* Get available tokens */
 let tokens = canvas.tokens.controlled.map(token => token.actor);
 if (tokens == null || tokens.length == 0) {
-  tokens = canvas.tokens.placeables.map(t => t.actor).filter(token => token.type == "character")
+    tokens = canvas.tokens.placeables.map(t => t.actor).filter(token => token.type == "character")
 }
 if (!tokens) {
-  ui.notifications.warn(`No PC tokens.`)
+    ui.notifications.warn(`No PC tokens.`)
+    return
 }
 let tokenNames = tokens.map(t => t.name);
 let tokenPoints = tokens.map(t => getItem(t).system.uses.value);
@@ -35,15 +36,17 @@ async function givePoints(html, points, characterName) {
   let currentPoints = item.system.uses.value;
   console.log(currentPoints);
 
-  let newChargeValue = currentPoints + points;
-  let update = { "_id": item._id, "system.uses.value": newChargeValue };
+  let newChargeValue = item.system.uses.spent - points;
+  console.log("newChargeValue:" + newChargeValue)
+  let update = {"system.uses.spent": newChargeValue};
   let updatedItem = item.update(update);
-  ui.notifications.info(`${selectedToken.name} given a point of inspiration. Current points: ${newChargeValue}`);
+  console.log(item);
+    ui.notifications.info(`${selectedToken.name} given a point of inspiration. Current points: ${item.system.uses.value + points}`);
 
   ChatMessage.create({
     user: game.user._id,
-    speaker: ChatMessage.getSpeaker({ token: selectedToken }),
-    content: `${selectedToken.name} gains ${points} point${points != 1 ? "s" : ""} of inspiration.`
+    speaker: ChatMessage.getSpeaker({token: selectedToken}),
+    content: `<p>${selectedToken.name} gains ${points} point${points != 1 ? "s" : ""} of inspiration, and now has ${item.system.uses.value + points}.</p>`
   });
 }
 
@@ -79,7 +82,7 @@ new Dialog({
           <input type="checkbox" name="characters" value="${name}" checked/>
           ${name} (${tokenPoints[tokenNames.indexOf(name)] ?? 0})
         </label>`).join("")
-    }
+      }
       </div>
     </div>
     <div class="form-group">
@@ -94,10 +97,10 @@ new Dialog({
         let selected = html.find('[name="characters"]').toArray();
         await console.log(selected)
         selected.forEach(character => {
-          if (character.checked) {
+	  if (character.checked) {
             console.log(character.value);
             givePoints(html, 1, character.value);
-          }
+	  }
         });
       }
     },
@@ -106,7 +109,7 @@ new Dialog({
     }
   },
   default: 'cancel',
-  close: () => { },
+  close: () => {},
   render: (html) => {
   }
 }).render(true);
